@@ -1,0 +1,96 @@
+body {
+    background: linear-gradient(135deg, #72EDF2 10%, #5151E5 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-size: cover;
+    transition: background 0.5s ease-in-out;
+}
+
+.card {
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 400px;
+    padding: 2em;
+    color: white;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.search-bar {
+    font-size: 18px;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    padding: 8px 20px;
+    width: 75%;
+    color: white;
+    background-color: #302222ed;
+}
+
+.icon {
+    position: absolute;
+    left: 20px;
+    color: white;
+}
+
+.weather {
+    margin-top: 20px;
+}
+
+.temp {
+    font-size: 50px;
+    margin: 10px 0;
+}
+
+.description, .humidity, .wind {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+.loading {
+    display: none;
+    border: 6px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top: 6px solid white;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Responsive for mobile */
+@media (max-width: 500px) {
+    .card {
+        width: 90%;
+    }
+
+    .temp {
+        font-size: 40px;
+    }
+
+    .search-bar {
+        width: 85%;
+        font-size: 16px;
+    }
+}
